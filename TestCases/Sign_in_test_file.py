@@ -30,16 +30,16 @@ class SgnIn(unittest.TestCase):
         signInPageObj.click_into_sign_in_button()
 
         # Search Part ----------------------------
-        signInPageObj.fill_search_field()
-        signInPageObj.product_search()
+        # signInPageObj.fill_search_field()
+        # signInPageObj.product_search()
 
         # Add To Card Part -------------------------------
-        signInPageObj.click_to_add_to_cart_button()
+        # signInPageObj.click_to_add_to_cart_button()
         signInPageObj.click_for_go_to_add_to_cart_page()
 
         # Delete Items On Cart Part ---------------------------
-        signInPageObj.delete_products_in_Amazon_cart()
-        # signInPageObj.delete_all_products_in_Amazon_cart()
+        # signInPageObj.delete_products_in_Amazon_cart()
+        signInPageObj.delete_all_products_in_Amazon_cart()
 
         time.sleep(5)
 

@@ -53,7 +53,8 @@ class SignInPageClass():
 
     def delete_all_products_in_Amazon_cart(self):
         deleteAllItemsInCart = self.find.custom_find_element(self.locators.deleteAllItemsInCartLocator)
-        deleteAllItemsInCart.click()
+        item = deleteAllItemsInCart
+
 
 
 class SignInPageLocatorsClass():
@@ -76,6 +77,6 @@ class SignInPageLocatorsClass():
 
     addToCartPageLocator = (By.ID, "nav-cart-text-container")
 
-    deleteItemsInCartLocator = (By.NAME, "submit.delete.C2f6b182b-edf0-4276-83cc-60c0a28bc29e")
+    deleteItemsInCartLocator = (By.CSS_SELECTOR, 'input[value="Delete"]')
 
-    deleteAllItemsInCartLocator = ()
+    deleteAllItemsInCartLocator = (By.CSS_SELECTOR, 'input[value="Delete"]')
