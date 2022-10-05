@@ -1,6 +1,7 @@
 from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from Common.Variables import Global_variable
 
 
 class SignInPageClass():
@@ -53,7 +54,13 @@ class SignInPageClass():
 
     def delete_all_products_in_Amazon_cart(self):
         deleteAllItemsInCart = self.find.custom_find_element(self.locators.deleteAllItemsInCartLocator)
-        item = deleteAllItemsInCart
+        for i in range(deleteAllItemsInCart, 0):
+            print(i)
+
+    def q_t_y(self):
+        qTYqTYClick = self.find.custom_find_element(self.locators.qTYClickLocator)
+        qTYqTYClick.click()
+
 
 
 
@@ -80,3 +87,6 @@ class SignInPageLocatorsClass():
     deleteItemsInCartLocator = (By.CSS_SELECTOR, 'input[value="Delete"]')
 
     deleteAllItemsInCartLocator = (By.CSS_SELECTOR, 'input[value="Delete"]')
+
+
+    qTYClickLocator = (By.ID, "a-autoid-0")
