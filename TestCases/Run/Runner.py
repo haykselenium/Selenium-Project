@@ -3,6 +3,12 @@ from unittest.suite import TestSuite
 from TestCases.Sign_in_test_file import SignIn
 from TestCases.Search_functionality_test_file import SearchFunctionality
 from TestCases.Add_to_cart_test_file import AddToCart
+from TestCases.Delete_product_in_cart_test_file import DeleteProduct
+
+
+class RunnerClass():
+    pass
+
 
 if __name__ == "__main__":
     loader = TestLoader()
@@ -11,6 +17,7 @@ if __name__ == "__main__":
         loader.loadTestsFromTestCase(SignIn),
         loader.loadTestsFromTestCase(SearchFunctionality),
         loader.loadTestsFromTestCase(AddToCart),
+        loader.loadTestsFromTestCase(DeleteProduct)
 
     ))
 
@@ -19,16 +26,6 @@ if __name__ == "__main__":
     runner.run(suite)
 
 # ------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
 
 
 # import unittest
