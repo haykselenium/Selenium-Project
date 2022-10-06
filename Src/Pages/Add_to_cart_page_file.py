@@ -19,5 +19,7 @@ class AddToCartPageClass():
 
 
 class AddToCartPageLocatorsClass():
+    # # Add To Cart Part
     addToCartButtonLocator = (By.ID, "add-to-cart-button")
+
     addToCartPageLocator = (By.ID, "nav-cart-text-container")

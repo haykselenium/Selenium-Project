@@ -17,7 +17,6 @@ class SearchFunctionality(BaseTestClass):
 
         self.mainPageObj.fill_search_field()
         self.mainPageObj.click_into_submit_button()
-        self.mainPageObj.product_search()
 
         time.sleep(5)
 
