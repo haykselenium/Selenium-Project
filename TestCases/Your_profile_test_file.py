@@ -1,21 +1,16 @@
 import time
 # --------------------------------------------------------------------------------------
-from Src.Pages.Quantity_page_file import QuantityPageClass
+from Src.Pages.Account.Click_in_to_profile_page_file import YourProfilePageClass
 from Src.Pages.Sign_in_page_file import SignInPageClass
-from Src.Pages.Main_page_file import MainPageClass
-from Src.Pages.Add_to_cart_page_file import AddToCartPageClass
-
 from TestCases.Base_test_file import BaseTestClass
 
 
-class Quantity(BaseTestClass):
+class YourProfile(BaseTestClass):
     def setUp(self):
-        self.QuantityPageObj = QuantityPageClass(self.driver)
+        self.yourProfileObj = YourProfilePageClass(self.driver)
         self.signInPageObj = SignInPageClass(self.driver)
-        self.mainPageObj = MainPageClass(self.driver)
-        self.addToCart = AddToCartPageClass(self.driver)
 
-    def test_quantity_amazon_product(self):
+    def test_your_profile(self):
         self.driver.get(
             "https://www.amazon.com/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26signIn%3D1%26useRedirectOnSuccess%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0")
 
@@ -30,18 +25,12 @@ class Quantity(BaseTestClass):
         time.sleep(6)
         self.signInPageObj.click_into_sign_in_button()
 
-        # search
-        self.mainPageObj.fill_search_field()
-        self.mainPageObj.click_into_submit_button()
-        self.mainPageObj.product_search()
+        self.yourProfileObj.click_in_to_account_and_lists()
+        self.yourProfileObj.manage_your_profiles()
 
-        # quantity  test  -- - -- --- - -- - -- - -- - - -- - -- - -- - -
-        self.QuantityPageObj.quantity_amazon_product()
-        self.QuantityPageObj.click_quantity_amazon_product()
+        time.sleep(3)
 
-        # ------------------------------------------------------------
 
-        self.addToCart.click_to_add_to_cart_button()
 
         time.sleep(5)
 

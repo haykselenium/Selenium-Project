@@ -26,26 +26,6 @@ class SignIn(BaseTestClass):
         time.sleep(6)
         self.signInPageObj.click_into_sign_in_button()
 
-
-        # -----------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-        # # Search Part ----------------------------
-        # # self.signInPageObj.fill_search_field()
-        # self.signInPageObj.product_search()
-        #
-        # # Add To Card Part -------------------------------
-        # self.signInPageObj.click_to_add_to_cart_button()
-        # # signInPageObj.click_for_go_to_add_to_cart_page()
-        #
-        # # Delete Items On Cart Part ---------------------------
-        # # signInPageObj.delete_products_in_Amazon_cart()
-        # self.signInPageObj.delete_all_products_in_Amazon_cart()
-
         time.sleep(5)
 
     def tearDown(self):

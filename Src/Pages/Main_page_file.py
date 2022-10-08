@@ -2,7 +2,6 @@ from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
 
 
-
 class MainPageClass():
     def __init__(self, driver):
         self.driver = driver
@@ -18,11 +17,13 @@ class MainPageClass():
         submitButtonElement = self.find.custom_find_element(self.locators.submitButtonFieldLocator)
         submitButtonElement.click()
 
-
+    def product_search(self):
+        searchProduct = self.find.custom_find_element(self.locators.productSearchLocator)
+        searchProduct.click()
 
 
 class MainPageLocatorsClass():
     searchTextFieldLocator = (By.ID, "twotabsearchtextbox")
     submitButtonFieldLocator = (By.ID, "nav-search-submit-button")
 
-
+    productSearchLocator = (By.LINK_TEXT, "Apple iPhone 12, 128GB, White - Unlocked (Renewed Premium)")

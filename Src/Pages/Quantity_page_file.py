@@ -10,9 +10,14 @@ class QuantityPageClass():
         self.locators = QuantityPageLocatorsClass
 
     def quantity_amazon_product(self):
-        qTYqTYClick = self.find.custom_find_element(self.locators.qTYClickLocator)
-        qTYqTYClick.click()
+        qtyClick = self.find.custom_find_element(self.locators.qtyClickLocator)
+        qtyClick.click()
+
+    def click_quantity_amazon_product(self):
+        secondQty = self.find.custom_find_element(self.locators.secondQtyClickLocator)
+        secondQty.click()
 
 
 class QuantityPageLocatorsClass():
-    qTYClickLocator = (By.ID, "a-autoid-0")
+    qtyClickLocator = (By.ID, "a-autoid-0")
+    secondQtyClickLocator = (By.ID, "quantity_1")
