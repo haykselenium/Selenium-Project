@@ -1,6 +1,8 @@
 from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+
+
+# from selenium.webdriver.common.keys import Keys
 
 
 class DeleteAllProductPageClass():
@@ -14,12 +16,16 @@ class DeleteAllProductPageClass():
         addToCartPage.click()
 
     def delete_all_product_in_Amazon_cart(self):
-        deleteAllItemInCart = self.find.custom_find_element(self.locators.deleteAllItemsInCartLocator)
-        for i in range(20):
-            for i in n:
+        while True:
+            try:
+                deleteAllItemInCart = self.find.custom_find_element(self.locators.deleteAllItemsInCartLocator)
                 deleteAllItemInCart.click()
+
+            except:
+                break
 
 
 class DeleteProductPageLocatorsClass():
     deleteAllItemsInCartLocator = (By.CSS_SELECTOR, 'input[value="Delete"]')
     addToCartPageLocator = (By.ID, "nav-cart-text-container")
+    productCountLocator = (By.CSS_SELECTOR, "span#nav-cart-count")

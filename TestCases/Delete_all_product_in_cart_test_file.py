@@ -27,10 +27,10 @@ class DeleteAllProduct(BaseTestClass):
 
         self.DeleteAllProductPageObj.click_for_go_to_add_to_cart_page()
         time.sleep(2)
-        # delete product in Amazon cart
+        # delete all product in Amazon cart
         self.DeleteAllProductPageObj.delete_all_product_in_Amazon_cart()
 
-        time.sleep(5)
+        time.sleep(2)
 
     def tearDown(self):
         print("called tearDown")

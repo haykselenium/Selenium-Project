@@ -39,11 +39,8 @@ class YourProfilePageLocatorsClass():
     accountAndListsLocator = (By.ID, "nav-link-accountList-nav-line-1")
     yourProfilesLocator = (By.XPATH, "(//div[@class='a-row'])[6]")
 
-    manageYourProfileLocator = (
-        By.XPATH, "/html/body/div[1]/div[2]/div/div[2]/div/div/div/div[1]/form/div/div/span/a/div/div[1]/p[1]")
-
+    manageYourProfileLocator = (By.CSS_SELECTOR, 'p.a-spacing-mini')
     profileNameLocator = (By.ID, "name-edit-modal-link")
-
 
     nameTextBoxLocator = (By.ID, "profile-name-text-input")
     saveChangeLocator = (By.CSS_SELECTOR, "span#profile-name-edit-submit-button")
