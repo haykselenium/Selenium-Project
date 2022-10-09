@@ -1,6 +1,8 @@
 from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
 import names
+
+
 # from selenium.webdriver.common.keys import Keys
 
 
@@ -42,7 +44,6 @@ class YourProfilePageLocatorsClass():
 
     profileNameLocator = (By.ID, "name-edit-modal-link")
 
+
     nameTextBoxLocator = (By.ID, "profile-name-text-input")
-    # saveChangeLocator = (By.ID, "profile-name-edit-submit-button-announce")
-    # saveChangeLocator = (By.ID, "//span[@id="profile-name-edit-submit-button-announce"]")
     saveChangeLocator = (By.CSS_SELECTOR, "span#profile-name-edit-submit-button")

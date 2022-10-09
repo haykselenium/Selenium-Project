@@ -15,8 +15,9 @@ class DeleteAllProductPageClass():
 
     def delete_all_product_in_Amazon_cart(self):
         deleteAllItemInCart = self.find.custom_find_element(self.locators.deleteAllItemsInCartLocator)
-        for item in deleteAllItemInCart:
-            pass
+        for i in range(20):
+            for i in n:
+                deleteAllItemInCart.click()
 
 
 class DeleteProductPageLocatorsClass():
