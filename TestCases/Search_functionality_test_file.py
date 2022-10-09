@@ -26,4 +26,4 @@ class SearchFunctionality(BaseTestClass):
 
 
 if __name__ == "__main__":
-    pass
+    unittest.main()

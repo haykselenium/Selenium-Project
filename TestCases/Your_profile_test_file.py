@@ -26,11 +26,12 @@ class YourProfile(BaseTestClass):
         self.signInPageObj.click_into_sign_in_button()
 
         self.yourProfileObj.click_in_to_account_and_lists()
-        self.yourProfileObj.manage_your_profiles()
-
         time.sleep(3)
 
-
+        self.yourProfileObj.manage_your_profiles()
+        self.yourProfileObj.edit_profile_neme()
+        time.sleep(2)
+        self.yourProfileObj.click_to_save_change_button()
 
         time.sleep(5)
 
