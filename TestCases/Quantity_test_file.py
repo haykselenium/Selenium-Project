@@ -4,8 +4,8 @@ from Src.Pages.Quantity_page_file import QuantityPageClass
 from Src.Pages.Sign_in_page_file import SignInPageClass
 from Src.Pages.Main_page_file import MainPageClass
 from Src.Pages.Add_to_cart_page_file import AddToCartPageClass
-
 from TestCases.Base_test_file import BaseTestClass
+from Common.Variables.Variables_file import VariablesClass
 
 
 class Quantity(BaseTestClass):
@@ -16,8 +16,7 @@ class Quantity(BaseTestClass):
         self.addToCart = AddToCartPageClass(self.driver)
 
     def test_quantity_amazon_product(self):
-        self.driver.get(
-            "https://www.amazon.com/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26signIn%3D1%26useRedirectOnSuccess%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0")
+        self.driver.get(VariablesClass.amazonSignInUrl)
 
         # Username Part
         self.signInPageObj.fill_username_field()

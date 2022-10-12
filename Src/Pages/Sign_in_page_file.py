@@ -1,5 +1,6 @@
 from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
+from Common.Variables.Variables_file import VariablesClass
 
 
 class SignInPageClass():
@@ -8,15 +9,15 @@ class SignInPageClass():
         self.find = Custom_find_file.CustomFind(driver)
         self.locators = SignInPageLocatorsClass
 
-    def fill_username_field(self, userName="testcaseselenium123321@gmail.com"):
+    def fill_username_field(self, user_name=VariablesClass.get_username()):
         userNameTextBoxElement = self.find.custom_find_element(self.locators.userNameFieldLocator)
-        userNameTextBoxElement.send_keys(userName)
+        userNameTextBoxElement.send_keys(user_name)
 
     def click_into_continue_button(self):
         continueButtonElement = self.find.custom_find_element(self.locators.continueButtonLocator)
         continueButtonElement.click()
 
-    def fill_password_field(self, password="Test123321"):
+    def fill_password_field(self, password=VariablesClass.get_password()):
         passwordTextBoxElement = self.find.custom_find_element(self.locators.passwordTextFieldLocator)
         passwordTextBoxElement.send_keys(password)
 

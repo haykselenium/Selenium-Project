@@ -1,6 +1,7 @@
 from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
 import names
+from selenium.webdriver import ActionChains
 
 
 # from selenium.webdriver.common.keys import Keys
@@ -13,8 +14,13 @@ class YourProfilePageClass():
         self.locators = YourProfilePageLocatorsClass
 
     def click_in_to_account_and_lists(self):
+        a = ActionChains(self.driver)
         accountAndListsButton = self.find.custom_find_element(self.locators.accountAndListsLocator)
-        accountAndListsButton.click()
+        a.move_to_element(accountAndListsButton).perform()
+
+        accountButton = self.find.custom_find_element(self.locators.accountLocator)
+        a.move_to_element(accountButton).click().perform()
+
         yourProfiles = self.find.custom_find_element(self.locators.yourProfilesLocator)
         yourProfiles.click()
 
@@ -37,6 +43,8 @@ class YourProfilePageClass():
 
 class YourProfilePageLocatorsClass():
     accountAndListsLocator = (By.ID, "nav-link-accountList-nav-line-1")
+    accountLocator = (By.XPATH, '(//span[@class="nav-text"])[4]')
+
     yourProfilesLocator = (By.XPATH, "(//div[@class='a-row'])[6]")
 
     manageYourProfileLocator = (By.CSS_SELECTOR, 'p.a-spacing-mini')

@@ -17,19 +17,19 @@ if __name__ == "__main__":
     loader = TestLoader()
 
     suite = TestSuite((
-        # test 1
+        # test for go to amazon cart and delete first product in cart
         loader.loadTestsFromTestCase(DeleteProduct),
-        # test 2
+        # test for SearchFunctionality in amazon
         loader.loadTestsFromTestCase(SearchFunctionality),
-        # test 3
+        # test for add product in amazon cart
         loader.loadTestsFromTestCase(AddToCart),
-        # test 4
+        # test for signin
         loader.loadTestsFromTestCase(SignIn),
-        # test 5
+        # test for product qty
         loader.loadTestsFromTestCase(Quantity),
-        # test 6
+        # test for go to profile page and change profile name
         loader.loadTestsFromTestCase(YourProfile),
-        # test 7
+        # test for go to amazon cart and delete all product in cart
         loader.loadTestsFromTestCase(DeleteAllProduct)
     ))
     # run test
