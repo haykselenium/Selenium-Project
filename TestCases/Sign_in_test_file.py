@@ -21,7 +21,7 @@ class SignIn(BaseTestClass):
         time.sleep(6)
         self.signInPageObj.click_into_sign_in_button()
 
-        time.sleep(5)
+        time.sleep(2)
 
     def tearDown(self):
         print("called tearDown")

@@ -18,7 +18,7 @@ class SearchFunctionality(BaseTestClass):
         self.mainPageObj.fill_search_field()
         self.mainPageObj.click_into_submit_button()
 
-        time.sleep(5)
+        time.sleep(1)
 
     def tearDown(self):
         self.driver.close()

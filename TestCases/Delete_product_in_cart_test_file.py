@@ -14,23 +14,15 @@ class DeleteProduct(BaseTestClass):
     def test_delete_product(self):
         self.driver.get(VariablesClass.amazonSignInUrl)
 
-        # Username Part
-        self.signInPageObj.fill_username_field()
-        self.signInPageObj.click_into_continue_button()
-
-        # Password Part ------------------------
-        self.signInPageObj.fill_password_field()
-        self.signInPageObj.check_to_keep_me_signed_in_checkbox()
-        # This Sleep Should Not Be There But We Add Because Amazon Detect That It Is a Robot
-        time.sleep(6)
-        self.signInPageObj.click_into_sign_in_button()
+        # fast sign Part
+        self.signInPageObj.fast_sign_in()
 
         self.DeleteProductPageObj.click_for_go_to_add_to_cart_page()
-        time.sleep(2)
+        time.sleep(1)
         # delete product in Amazon cart
         self.DeleteProductPageObj.delete_product_in_Amazon_cart()
 
-        time.sleep(5)
+        time.sleep(1)
 
     def tearDown(self):
         print("called tearDown")

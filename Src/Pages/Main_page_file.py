@@ -26,4 +26,4 @@ class MainPageLocatorsClass():
     searchTextFieldLocator = (By.ID, "twotabsearchtextbox")
     submitButtonFieldLocator = (By.ID, "nav-search-submit-button")
 
-    productSearchLocator = (By.LINK_TEXT, "Apple iPhone 12, 128GB, White - Unlocked (Renewed Premium)")
+    productSearchLocator = (By.XPATH, '//span[@class="a-size-medium a-color-base a-text-normal"][1]')

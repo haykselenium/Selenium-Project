@@ -2,7 +2,6 @@ from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
 
 
-
 class AddToCartPageClass():
     def __init__(self, driver):
         self.driver = driver
@@ -19,7 +18,5 @@ class AddToCartPageClass():
 
 
 class AddToCartPageLocatorsClass():
-    # # Add To Cart Part
     addToCartButtonLocator = (By.ID, "add-to-cart-button")
-
     addToCartPageLocator = (By.ID, "nav-cart-text-container")

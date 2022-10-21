@@ -14,26 +14,18 @@ class YourProfile(BaseTestClass):
     def test_your_profile(self):
         self.driver.get(VariablesClass.amazonSignInUrl)
 
-        # Username Part
-        self.signInPageObj.fill_username_field()
-        self.signInPageObj.click_into_continue_button()
-
-        # Password Part ------------------------
-        self.signInPageObj.fill_password_field()
-        self.signInPageObj.check_to_keep_me_signed_in_checkbox()
-        # This Sleep Should Not Be There But We Add Because Amazon Detect That It Is a Robot
-        time.sleep(6)
-        self.signInPageObj.click_into_sign_in_button()
+        # fast sign Part
+        self.signInPageObj.fast_sign_in()
 
         self.yourProfileObj.click_in_to_account_and_lists()
-        time.sleep(3)
+        time.sleep(1)
 
         self.yourProfileObj.manage_your_profiles()
         self.yourProfileObj.edit_profile_neme()
-        time.sleep(2)
+        time.sleep(1)
         self.yourProfileObj.click_to_save_change_button()
 
-        time.sleep(5)
+        time.sleep(2)
 
     def tearDown(self):
         print("called tearDown")

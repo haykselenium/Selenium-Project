@@ -4,9 +4,6 @@ import names
 from selenium.webdriver import ActionChains
 
 
-# from selenium.webdriver.common.keys import Keys
-
-
 class YourProfilePageClass():
     def __init__(self, driver):
         self.driver = driver

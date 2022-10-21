@@ -18,16 +18,9 @@ class Quantity(BaseTestClass):
     def test_quantity_amazon_product(self):
         self.driver.get(VariablesClass.amazonSignInUrl)
 
-        # Username Part
-        self.signInPageObj.fill_username_field()
-        self.signInPageObj.click_into_continue_button()
+        # fast sign Part
+        self.signInPageObj.fast_sign_in()
 
-        # Password Part ------------------------
-        self.signInPageObj.fill_password_field()
-        self.signInPageObj.check_to_keep_me_signed_in_checkbox()
-        # This Sleep Should Not Be There But We Add Because Amazon Detect That It Is a Robot
-        time.sleep(6)
-        self.signInPageObj.click_into_sign_in_button()
 
         # search
         self.mainPageObj.fill_search_field()
@@ -42,7 +35,7 @@ class Quantity(BaseTestClass):
 
         self.addToCart.click_to_add_to_cart_button()
 
-        time.sleep(5)
+        time.sleep(1)
 
     def tearDown(self):
         print("called tearDown")

@@ -18,8 +18,11 @@ class DeleteAllProductPageClass():
 
     def delete_all_product_in_Amazon_cart(self):
         while self.get_cart_products_quantity() > 0:
-            deleteItemInCart = self.find.custom_find_element(self.locators.deleteAllItemsInCartLocator)
-            deleteItemInCart.click()
+            try:
+                deleteItemInCart = self.find.custom_find_element(self.locators.deleteAllItemsInCartLocator)
+                deleteItemInCart.click()
+            except NameError:
+                print("Oops! Not have more item in cart")
 
 
 class DeleteProductPageLocatorsClass():

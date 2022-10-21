@@ -33,5 +33,6 @@ if __name__ == "__main__":
         loader.loadTestsFromTestCase(DeleteAllProduct)
     ))
     # run test
-    runner = TextTestRunner(verbosity=2)
+    runner = TextTestRunner(verbosity=1)  # Test one by one
+    # runner = TextTestRunner(verbosity=2)  # Test all in one time
     runner.run(suite)

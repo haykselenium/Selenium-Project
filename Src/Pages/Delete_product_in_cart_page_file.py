@@ -1,6 +1,5 @@
 from Common.Find import Custom_find_file
 from selenium.webdriver.common.by import By
-# from selenium.webdriver.common.keys import Keys
 
 
 class DeleteProductPageClass():
@@ -12,7 +11,6 @@ class DeleteProductPageClass():
     def click_for_go_to_add_to_cart_page(self):
         addToCartPage = self.find.custom_find_element(self.locators.addToCartPageLocator)
         addToCartPage.click()
-
 
     def delete_product_in_Amazon_cart(self):
         deleteItemInCart = self.find.custom_find_element(self.locators.deleteItemsInCartLocator)
