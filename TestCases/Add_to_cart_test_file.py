@@ -27,6 +27,5 @@ class AddToCart(BaseTestClass):
         self.addToCartPageObj.click_to_add_to_cart_button()
 
         time.sleep(1)
-
     def tearDown(self):
         print("called tearDown")
