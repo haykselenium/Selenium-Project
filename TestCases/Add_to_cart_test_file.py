@@ -5,9 +5,11 @@ from Src.Pages.Add_to_cart_page_file import AddToCartPageClass
 from Src.Pages.Sign_in_page_file import SignInPageClass
 from Common.Variables.Variables_file import VariablesClass
 from Src.Pages.Main_page_file import MainPageClass
+import pytest
 
 
 class AddToCart(BaseTestClass):
+    @pytest.fixture()
     def setUp(self):
         self.addToCartPageObj = AddToCartPageClass(self.driver)
         self.signInPageObj = SignInPageClass(self.driver)
@@ -27,5 +29,6 @@ class AddToCart(BaseTestClass):
         self.addToCartPageObj.click_to_add_to_cart_button()
 
         time.sleep(1)
+
     def tearDown(self):
         print("called tearDown")

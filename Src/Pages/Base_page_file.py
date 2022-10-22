@@ -69,20 +69,22 @@ class BasePageClass:
             .drag_and_drop_by_offset(draggable, finish['x'] - start['x'], finish['y'] - start['y']) \
             .perform()
 
-    def set_text(self, settext):
-        return self.find.custom_find_element(settext)
+    def click_to_element(self, element):
+        element.click()
 
-    def get_text(self, text):
-        return self.find.custom_find_element(text)
+    def perform(self):
+        element = ActionChains(self.driver)
+        element.perform()
 
-    def clear_text(self):
-        return self.driver.clear
+    def set_text(self, element, text):
+        ellement = ActionChains(self.driver)
+        ellement.send_keys_to_element(element, text)
 
-    def find_element(self, locator):
-        return self.find.custom_find_element(locator)
+    def get_text(self, element):
+        element.text()
 
-    def open(self, url):
-        pass
+    def clear_text(self, element):
+        element.clear()
 
     def get_title(self):
         return self.driver.title
