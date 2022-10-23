@@ -10,7 +10,8 @@ class SignIn(BaseTestClass):
 
     def test_amazon_sign_in(self):
         self.driver.get(VariablesClass.amazonSignInUrl)
-        # Username Part
+
+        # Username Part -------------------------
         self.signInPageObj.fill_username_field()
         self.signInPageObj.click_into_continue_button()
 

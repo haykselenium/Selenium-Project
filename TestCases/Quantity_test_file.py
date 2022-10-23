@@ -1,5 +1,4 @@
 import time
-# --------------------------------------------------------------------------------------
 from Src.Pages.Quantity_page_file import QuantityPageClass
 from Src.Pages.Sign_in_page_file import SignInPageClass
 from Src.Pages.Main_page_file import MainPageClass
@@ -21,18 +20,16 @@ class Quantity(BaseTestClass):
         # fast sign Part
         self.signInPageObj.fast_sign_in()
 
-
-        # search
+        # search product part
         self.mainPageObj.fill_search_field()
         self.mainPageObj.click_into_submit_button()
         self.mainPageObj.product_search()
 
-        # quantity  test  -- - -- --- - -- - -- - -- - - -- - -- - -- - -
+        # product quantity  test
         self.QuantityPageObj.quantity_amazon_product()
         self.QuantityPageObj.click_quantity_amazon_product()
 
-        # ------------------------------------------------------------
-
+        # add product on amazon cart
         self.addToCart.click_to_add_to_cart_button()
 
         time.sleep(1)

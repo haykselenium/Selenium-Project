@@ -1,5 +1,4 @@
 import time
-# --------------------------------------------------------------------------------------
 from Src.Pages.Account.Click_in_to_profile_page_file import YourProfilePageClass
 from Src.Pages.Sign_in_page_file import SignInPageClass
 from TestCases.Base_test_file import BaseTestClass
@@ -21,8 +20,12 @@ class YourProfile(BaseTestClass):
         time.sleep(1)
 
         self.yourProfileObj.manage_your_profiles()
+
+        # change random amazon profile name
         self.yourProfileObj.edit_profile_neme()
         time.sleep(1)
+
+        # save all change
         self.yourProfileObj.click_to_save_change_button()
 
         time.sleep(2)

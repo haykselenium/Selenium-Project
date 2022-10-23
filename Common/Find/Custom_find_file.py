@@ -15,3 +15,11 @@ class CustomFind():
             print(e)
             exit(3)
 
+    def custom_find_elements(self, locator: tuple):
+        try:
+            return WebDriverWait(self.driver, 10).until(EC.presence_of_all_elements_located(locator))
+        except Exception as e:
+            print("ERROR 3: Element Not Found Exception")
+            print(e)
+            exit(3)
+

@@ -1,8 +1,5 @@
 import time
 import unittest
-# --------------------------------------------------------------------------------------
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from Src.Pages.Main_page_file import MainPageClass
 from TestCases.Base_test_file import BaseTestClass
 
@@ -15,6 +12,7 @@ class SearchFunctionality(BaseTestClass):
         self.driver.get("https://www.amazon.com")
         self.assertIn("Amazon.com. Spend less. Smile more.", self.driver.title)
 
+        # search functionality test part
         self.mainPageObj.fill_search_field()
         self.mainPageObj.click_into_submit_button()
 

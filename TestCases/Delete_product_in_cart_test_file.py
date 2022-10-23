@@ -1,5 +1,4 @@
 import time
-# --------------------------------------------------------------------------------------
 from Src.Pages.Delete_product_in_cart_page_file import DeleteProductPageClass
 from Src.Pages.Sign_in_page_file import SignInPageClass
 from TestCases.Base_test_file import BaseTestClass
@@ -19,6 +18,7 @@ class DeleteProduct(BaseTestClass):
 
         self.DeleteProductPageObj.click_for_go_to_add_to_cart_page()
         time.sleep(1)
+
         # delete product in Amazon cart
         self.DeleteProductPageObj.delete_product_in_Amazon_cart()
 

@@ -1,4 +1,6 @@
+import unittest
 from unittest import TestLoader, TextTestRunner, TestSuite
+import HtmlTestRunner
 from TestCases.Sign_in_test_file import SignIn
 from TestCases.Search_functionality_test_file import SearchFunctionality
 from TestCases.Add_to_cart_test_file import AddToCart
@@ -14,6 +16,8 @@ class RunnerClass(BaseTestClass):
 
 
 if __name__ == "__main__":
+    # generate HTML report
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='TestCases/Run/Reports'))
     loader = TestLoader()
 
     suite = TestSuite((
